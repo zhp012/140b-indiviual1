@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  zhp012</title>
+  
+  
+  
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style.scss">
+      <script type="text/javascript" src="index.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.bundle.min.js"></script>
+  
+</head>
+
+<body>
+
+  <aside class='sidebar'>
+  <center>NVIDIA</center>
+  <img class = 'img1' src = "data:image/png;base64,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">
+</aside>
+<aside class='content'>
+  <nav>
+    <label for="drop"> Menu</label>
+    <input type="checkbox" id="drop" />
+    <ul class="menu">
+      <a href="#a">Madlib</a>
+      <a href="#b">Marketing channels</a>
+      <a href="#c">Pricing Model</a>
+      <a href="#d">Sales Revenue</a>
+      <a href="#e">Monthly Profit/loss</a>
+      <a href="#f">Average CVC</a>
+    </ul>
+  </nav>
+  <section class='blocks'>
+     <section id = 'a'> 
+       <center>Madlib</center>
+       <p>NVIDIA is a B2C company that serves computer customers who wish to build a powerful computer. </p>
+    </section>
+     <section id = 'b'> 
+       <center>Marketing Channels</center>
+      
+       <li>NVIDIA directly sales the graphic card to customers</li>
+       <li>NVIDIA first sales the graphic card to gaming and computer developers and then let them sales the complete products that contain the graphic card they build to customers</li>
+       
+    </section>
+     <section id = 'c'>
+       <center>Pricing Model</center>
+  
+       <p> NVIDIA use the value-based pricing. NVIDIA build graphic cards with different performance and prices. Customers can always find their desired pricing and performance products.</p>
+    </section>
+     <section id = 'f'> 
+       <center>Average CVC</center>
+       <center class = 'center'>The average CVC for NVIDIA is 2713/542 = 5.005</center>
+     </section>
+     <section id = 'd'>
+       <center>Sales Revenue</center>
+       <canvas id="salChart" width="200" height="200"></canvas></div>
+    </section>
+     <section id = 'e'>
+       <center>Monthly Profit</center>
+       <canvas id="monChart" width="200" height="200"></canvas></div>
+    </section>
+     
+  </section>
+</aside>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.bundle.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

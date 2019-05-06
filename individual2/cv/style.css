@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+}
+body img.img1 {
+  height: 10vh;
+  width: 50vh;
+}
+body a {
+  color: HSLA(240, 70%, 25%, 1);
+  background: HSLA(120, 100%, 40%, 1);
+}
+body aside.sidebar {
+  background: HSLA(120, 100%, 40%, 1);
+  display: none;
+}
+body aside.content {
+  background: HSLA(0, 0%, 0%, 0.9);
+}
+body aside.content section.blocks {
+  padding: 0.5rem;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+body aside.content section.blocks section {
+  background: white;
+  min-height: 180px;
+  /*display: flex;*/
+  /*align-items: center;
+  justify-content: center;*/
+}
+body [id^=drop] {
+  display: none;
+}
+body nav ul {
+  width: 100%;
+  list-style: none;
+  background: white;
+}
+body nav ul a {
+  padding: 1rem;
+  border: 1px solid #bbb;
+}
+
+@media (min-width: 600px) {
+  body {
+    grid-template-columns: 200px auto;
+  }
+  body aside.sidebar {
+    display: block;
+  }
+  body aside.content .thumb {
+    display: none;
+  }
+  body label {
+    display: none;
+  }
+  body nav ul {
+    display: flex;
+    flex-flow: row no-wrap;
+  }
+  body nav ul a {
+    flex: 1 1 auto;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+  }
+}
+@media (max-width: 600px) {
+  body label + a, .menu {
+    display: none;
+  }
+
+  body [id^=drop]:checked + ul {
+    display: block;
+  }
+
+  .thumb {
+    cursor: pointer;
+    text-align: center;
+    padding: .4rem;
+    position: absolute;
+    left: 0px;
+    top: 8px;
+  }
+  .thumb:hover {
+    background: #ddd;
+  }
+
+  label {
+    display: block;
+    background: HSLA(120, 100%, 40%, 1);
+    cursor: pointer;
+    padding: 1rem 1rem 1rem 2rem;
+  }
+}
+center.center {
+  align-items: center;
+  justify-content: center;
+}
+
+#a, #b, #c, #f {
+  display: grid;
+  grid-gap: 0.1rem;
+  padding: 1rem;
+}
+
+img.img2 {
+  height: 100vh;
+  width: 100vh;
+}
