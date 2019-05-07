@@ -1,0 +1,128 @@
+* {margin:0; 
+  padding:0;  
+  box-sizing: border-box;}
+
+body {
+  
+  img.img1{
+    height: 10vh;
+    width:50vh;
+  }
+    
+  a{
+    color: HSLA(240, 70%, 25%, 1.0);
+    background: HSLA(120, 100%, 40%, 1.0);
+   
+  }
+  height:100vh;
+  width:100vw;
+
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  
+  aside.sidebar {
+    background:HSLA(120, 100%, 40%, 1.0);
+    display:none;
+  }
+  
+  
+
+  aside.content {
+    
+    background: HSLA(0, 0%, 0%, 0.9); 
+    section.blocks {
+      padding:0.5rem;
+      display: grid;
+      grid-gap: 0.5rem;
+      grid-template-columns:  
+        repeat(auto-fit, minmax(400px, 1fr));
+      section {
+        background:white; 
+        min-height:180px;
+        /*display: flex;*/
+        /*align-items: center;
+        justify-content: center;*/
+      }  
+      
+      
+    }
+
+  }  
+
+  
+   [id^=drop] {display: none;} 
+     
+  nav ul {
+    width:100%;
+    list-style: none;
+    background: white;
+  }
+
+  nav ul a {
+    padding:1rem;
+    border:1px solid #bbb;    
+  }
+
+}
+
+@media (min-width: 600px) { 
+  body {
+
+    aside.sidebar {display: block;}    
+    aside.content .thumb {display:none}
+    label {display:none}
+    grid-template-columns: 200px auto; 
+    
+    nav ul {
+      display: flex;
+      flex-flow: row no-wrap;
+    }
+    
+    nav ul a {
+      flex: 1 1 auto;    
+      padding:1rem;
+      border-right:1px solid #ddd;
+    }      
+
+  }
+}  
+
+@media (max-width: 600px) {  
+  body label + a, .menu {display: none;}     
+  body [id^=drop]:checked + ul {display: block;}    
+      
+  .thumb {
+    cursor:pointer;      
+    text-align:center;
+    padding:.4rem;
+    position:absolute;
+    left: 0px;
+    top:8px;
+    &:hover {background:#ddd}
+  }        
+  
+  label {
+    display: block;
+    background:HSLA(120, 100%, 40%, 1.0);
+    cursor:pointer;
+    padding:1rem 1rem 1rem 2rem;
+  }    
+}  
+
+center.center{
+  align-items: center;
+  justify-content: center;
+}
+
+#a, #b, #c, #f{
+   display: grid;
+   grid-gap: 0.1rem;
+   padding:1rem;
+ 
+}
+
+img.img2{
+  height: 100vh;
+  width:100vh;
+}
